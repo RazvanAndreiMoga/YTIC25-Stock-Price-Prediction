@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+tensorflow
+nltk
+pytrends
+yfinance
+seaborn
+sqlite3

@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "./data_fetchers",
+        "./model",
+        "./data_preprocessors"
+    ]
+}
