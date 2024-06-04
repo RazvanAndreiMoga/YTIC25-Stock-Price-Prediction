@@ -1,3 +1,3 @@
-Day 1: Predicted Close = 170.33, Trend = Bearish
-Day 2: Predicted Close = 170.36, Trend = Bearish
-Day 3: Predicted Close = 170.43, Trend = Bearish
+Day 1: Predicted Close = 172.13, Trend = Bearish
+Day 2: Predicted Close = 172.18, Trend = Bearish
+Day 3: Predicted Close = 172.34, Trend = Bearish

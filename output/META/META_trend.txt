@@ -1,0 +1,3 @@
+Day 1: Predicted Close = 498.60, Trend = Bullish
+Day 2: Predicted Close = 498.48, Trend = Bullish
+Day 3: Predicted Close = 499.03, Trend = Bullish

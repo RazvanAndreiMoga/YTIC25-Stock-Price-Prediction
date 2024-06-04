@@ -15,7 +15,7 @@ def main(ticker='MSFT'):
     stock_fetcher = StockFetcher(start_date='2024-01-01', end_date='2024-03-31')
     
     # Fetch historical prices for the given ticker
-    hist = stock_fetcher.fetch_historical_prices(ticker)
+    price_df = stock_fetcher.fetch_historical_prices(ticker)
 
     # Initialize the SentimentFetcher
     sentiment_fetcher = SentimentFetcher('input/financial_data.db')
@@ -33,10 +33,10 @@ def main(ticker='MSFT'):
     trend_fetcher = TrendFetcher(ticker=ticker, max_retries=10, wait_time=10)
     
     # Fetch trend data
-    trend_data = trend_fetcher.fetch_data(start_year=2024, start_mon=1, stop_year=2024, stop_mon=3)
+    trend_df = trend_fetcher.fetch_data(start_year=2024, start_mon=1, stop_year=2024, stop_mon=3)
 
     # Initialize the DataMerger with the desired ticker and date range
-    data_merger = DataMerger(ticker=ticker, start_date='2024-01-01', end_date='2024-03-31')
+    data_merger = DataMerger(ticker=ticker, price_df=price_df, sentiment_df=sentiment_df, trend_df=trend_df)
 
     # Merge data for the given ticker
     merged_df, correlation_matrix = data_merger.merge_data()
