@@ -1,0 +1,7 @@
+Model: gemini_2.5_flash_preview_05_20
+Ticker: MSFT
+MAE: 2.5121
+RMSE: 3.1340
+sMAPE: 0.60%
+R2 Score: 0.0406
+Directional Accuracy (DA): 0.5000

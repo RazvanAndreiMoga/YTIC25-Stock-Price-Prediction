@@ -36,7 +36,7 @@ class TrendFetcher:
         else:
             # Load the data from the existing file
             data = pd.read_csv(file_path, index_col=0)
-            print("Data loaded from existing file.")
+            # print("Data loaded from existing file.")
         
         # Plot the trend data using matplotlib
         plt.figure(figsize=(14, 5))

@@ -1,0 +1,7 @@
+Model: gemini_2.5_flash_preview_05_20
+Ticker: GOOG
+MAE: 5.1590
+RMSE: 5.1859
+sMAPE: 3.55%
+R2 Score: -49.3680
+Directional Accuracy (DA): 0.5000

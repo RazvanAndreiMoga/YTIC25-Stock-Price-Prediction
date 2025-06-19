@@ -1,0 +1,7 @@
+Model: phi_4
+Ticker: MSFT
+MAE: 1.1284
+RMSE: 1.2096
+sMAPE: 0.27%
+R2 Score: 0.8571
+Directional Accuracy (DA): 1.0000

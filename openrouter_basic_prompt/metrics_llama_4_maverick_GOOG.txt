@@ -1,0 +1,7 @@
+Model: llama_4_maverick
+Ticker: GOOG
+MAE: 4.7590
+RMSE: 4.8326
+sMAPE: 3.27%
+R2 Score: -42.7385
+Directional Accuracy (DA): 0.5000

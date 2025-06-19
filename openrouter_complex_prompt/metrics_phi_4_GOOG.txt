@@ -1,0 +1,7 @@
+Model: phi_4
+Ticker: GOOG
+MAE: 6.7924
+RMSE: 6.8242
+sMAPE: 4.70%
+R2 Score: -86.2170
+Directional Accuracy (DA): 0.5000

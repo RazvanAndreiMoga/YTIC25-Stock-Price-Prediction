@@ -1,0 +1,7 @@
+Model: deepseek_r1_0528
+Ticker: GOOG
+MAE: 4.8090
+RMSE: 4.8446
+sMAPE: 3.30%
+R2 Score: -42.9569
+Directional Accuracy (DA): 0.5000

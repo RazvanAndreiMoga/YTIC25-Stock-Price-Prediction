@@ -1,0 +1,7 @@
+Model: gemini_2.5_flash_preview_05_20
+Ticker: AMZN
+MAE: 0.5567
+RMSE: 0.5776
+sMAPE: 0.32%
+R2 Score: 0.8539
+Directional Accuracy (DA): 1.0000

@@ -6,7 +6,7 @@ import json
 
 class HFLLMModel:
     def __init__(self, model="openai/gpt-4o"):
-        self.api_key = "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"
+        self.api_key = ""
         self.model = model
         self.url = "https://openrouter.ai/api/v1/chat/completions"
         self.headers = {

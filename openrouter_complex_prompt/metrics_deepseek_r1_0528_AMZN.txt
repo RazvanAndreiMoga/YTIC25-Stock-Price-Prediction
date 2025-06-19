@@ -1,0 +1,7 @@
+Model: deepseek_r1_0528
+Ticker: AMZN
+MAE: 4.3433
+RMSE: 4.7970
+sMAPE: 2.49%
+R2 Score: -9.0789
+Directional Accuracy (DA): 0.0000

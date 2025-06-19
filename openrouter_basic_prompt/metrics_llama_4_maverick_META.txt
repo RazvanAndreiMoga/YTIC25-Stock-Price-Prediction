@@ -1,0 +1,7 @@
+Model: llama_4_maverick
+Ticker: META
+MAE: 12.7641
+RMSE: 12.9935
+sMAPE: 2.60%
+R2 Score: -8.5902
+Directional Accuracy (DA): 0.5000

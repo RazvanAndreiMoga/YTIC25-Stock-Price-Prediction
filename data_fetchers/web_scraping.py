@@ -129,7 +129,7 @@ class FinnHub():
         self.max_call = 60
         self.time_sleep = 60
         self.nb_request = 0
-        self.finhub_key = 'cp498o1r01qs3666htc0cp498o1r01qs3666htcg'
+        self.finhub_key = ''
         self.news_header = ['category', 'datetime','headline','id','image','related','source','summary','url']
         self.start_date = start_date
         self.end_date = end_date

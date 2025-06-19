@@ -1,0 +1,7 @@
+Model: LSTM
+Ticker: GOOG
+MAE: 7.4203
+RMSE: 7.4263
+sMAPE: 5.03%
+R2 Score: -1057.0549
+Directional Accuracy (DA): 1.0000

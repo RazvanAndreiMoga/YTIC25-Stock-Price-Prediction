@@ -1,0 +1,7 @@
+Model: LSTM
+Ticker: AMZN
+MAE: 6.9500
+RMSE: 6.9964
+sMAPE: 3.95%
+R2 Score: -62.2081
+Directional Accuracy (DA): 0.5000

@@ -1,0 +1,7 @@
+Model: LSTM
+Ticker: MSFT
+MAE: 10.4620
+RMSE: 10.5100
+sMAPE: 2.54%
+R2 Score: -713.7964
+Directional Accuracy (DA): 0.0000

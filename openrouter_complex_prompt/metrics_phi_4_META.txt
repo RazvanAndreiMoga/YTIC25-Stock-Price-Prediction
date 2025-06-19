@@ -1,0 +1,7 @@
+Model: phi_4
+Ticker: META
+MAE: 3.1399
+RMSE: 3.8030
+sMAPE: 0.63%
+R2 Score: 0.1784
+Directional Accuracy (DA): 0.5000

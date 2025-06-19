@@ -1,0 +1,49 @@
+import json
+import requests
+
+class HFLLMPredictionMaker:
+    def __init__(self, api_key, model="openai/gpt-4o"):
+        self.api_key = api_key
+        self.model = model
+
+    def make_prediction(self, df):
+        if len(df) < 60:
+            raise ValueError("DataFrame must contain at least 11 rows.")
+
+        # Use the last 11 rows
+        recent_data = df.tail(60).reset_index(drop=True)
+
+        # Format the first 10 rows as input
+        input_data = recent_data.iloc[:59].to_dict(orient="records")
+        input_text = f"""Given the following 59 days of stock data, will the stock price go UP or DOWN on the next day?
+
+{json.dumps(input_data, indent=2)}
+
+Respond with only "UP" or "DOWN"."""
+
+        # Prepare the API request
+        response = requests.post(
+            url="https://openrouter.ai/api/v1/chat/completions",
+            headers={
+                "Authorization": f"Bearer {self.api_key}",
+                "HTTP-Referer": "your-site.com",
+                "X-Title": "StockSentimentApp"
+            },
+            data=json.dumps({
+                "model": self.model,
+                "messages": [{"role": "user", "content": input_text}]
+            })
+        )
+
+        if response.status_code != 200:
+            raise RuntimeError(f"OpenRouter API error: {response.status_code} - {response.text}")
+
+        result = response.json()
+        prediction = result["choices"][0]["message"]["content"].strip().upper()
+
+        # Determine actual direction
+        price_today = recent_data.iloc[59]["Price"]
+        price_tomorrow = recent_data.iloc[60]["Price"]
+        actual_direction = "UP" if price_tomorrow > price_today else "DOWN"
+
+        return prediction, actual_direction

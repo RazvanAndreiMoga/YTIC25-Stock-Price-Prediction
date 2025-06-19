@@ -24,7 +24,7 @@ from peft import (
 )
 
 # Replace with your own api_key and project name
-os.environ['WANDB_API_KEY'] = '9eb3b8f122ddd8fb07c4cd438055c48f7a3b6951'  # TODO: Replace with your environment variable
+os.environ['WANDB_API_KEY'] = ''  # TODO: Replace with your environment variable
 os.environ['WANDB_PROJECT'] = 'Benchmark with Llama-3-8B'
 
 class GenerationEvalCallback(TrainerCallback):

@@ -1,0 +1,7 @@
+Model: llama_4_maverick
+Ticker: AMZN
+MAE: 0.8233
+RMSE: 0.9042
+sMAPE: 0.47%
+R2 Score: 0.6419
+Directional Accuracy (DA): 1.0000

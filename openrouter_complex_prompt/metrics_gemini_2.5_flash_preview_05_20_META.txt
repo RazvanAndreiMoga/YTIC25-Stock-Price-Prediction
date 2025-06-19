@@ -1,0 +1,7 @@
+Model: gemini_2.5_flash_preview_05_20
+Ticker: META
+MAE: 18.9074
+RMSE: 19.5169
+sMAPE: 3.87%
+R2 Score: -20.6373
+Directional Accuracy (DA): 0.5000

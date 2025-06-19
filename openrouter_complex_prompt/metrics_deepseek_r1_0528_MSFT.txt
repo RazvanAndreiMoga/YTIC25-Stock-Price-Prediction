@@ -1,0 +1,7 @@
+Model: deepseek_r1_0528
+Ticker: MSFT
+MAE: 6.4449
+RMSE: 7.7005
+sMAPE: 1.55%
+R2 Score: -4.7925
+Directional Accuracy (DA): 0.0000

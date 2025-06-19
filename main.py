@@ -9,10 +9,13 @@ from data_fetchers.trend_fetcher import TrendFetcher
 from plotter.plotter import Plotter
 from model.hf_llm_model import HFLLMModel
 from model.hf_llm_prediction_maker import HFLLMPredictionMaker
-from model.hf_llm_prediction_maker import HFLLMPredictionMaker
+import json
 
 
 def main(ticker='MSFT'):
+
+    api_key=""
+
     # Initialize the StockFetcher
     stock_fetcher = StockFetcher(start_date='2024-01-01', end_date='2024-03-31')
     price_df = stock_fetcher.fetch_historical_prices(ticker)
@@ -33,18 +36,49 @@ def main(ticker='MSFT'):
     merged_df, correlation_matrix = data_merger.merge_data()
 
     # Preprocess merged data (mainly to normalize if needed)
-    preprocessor = DataPreprocessor(seq_length=10)
-    merged_df = preprocessor.normalize_data(merged_df)
+    # preprocessor = DataPreprocessor(seq_length=10)
+    # merged_df = preprocessor.normalize_data(merged_df)
 
     # hf_model = HFLLMModel()
     # predictor = HFLLMPredictionMaker(model=hf_model, seq_length=10)
 
-    predictor = HFLLMPredictionMaker(api_key="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")
-    prediction, actual = predictor.make_prediction(merged_df)
+    models = [
+        "deepseek/deepseek-r1-0528", 
+        "microsoft/phi-4-reasoning-plus",
+        "meta-llama/llama-4-maverick"           
+    ]
+    for model in models:
+        # Initialize the predictor
+        api_key = api_key
+        predictor = HFLLMPredictionMaker(api_key, model=model)
 
-    print(f"🔮 LLM Prediction: {prediction}")
-    print(f"📈 Actual Movement: {actual}")
-    print("✅ Correct!" if prediction == actual else "❌ Incorrect.")
+        # Make price prediction
+        predicted_price, actual_price, result = predictor.make_prediction(merged_df, ticker)
+        print(f"Predicted: ${predicted_price:.2f}, Actual: ${actual_price:.2f}")
+        print(f"Error: ${result['absolute_error']:.2f} ({result['percentage_error']:.2f}%)")
+
+        # Comprehensive analysis
+        analysis = predictor.analyze_ticker_performance(ticker)
+        print(f"Direction Accuracy: {analysis['direction_accuracy']:.2f}%")
+        print(f"MAPE: {analysis['error_metrics']['mape']:.2f}%")
+        print(f"RMSE: ${analysis['error_metrics']['rmse']:.2f}")
+
+        # Quality report
+        quality_report = predictor.get_prediction_quality_report(ticker, model)
+        print(f"Quality Rating: {quality_report['quality_rating']}")
+        print(f"Recommendations: {quality_report['recommendations']}")
+
+        # Enhanced trading simulation with thresholds
+        # trading_results = predictor.get_trading_simulation(ticker, price_threshold=0.03)
+        # print(f"Strategy Return: {trading_results['total_return_pct']:.2f}%")
+        # print(f"Buy & Hold Return: {trading_results['buy_hold_return_pct']:.2f}%")
+
+        # predictor = HFLLMPredictionMaker(api_key="", model = model)
+        # prediction, actual = predictor.make_prediction(merged_df)
+        
+        # print(f"🔮 {model} Prediction: {prediction}")
+        # print(f"📈 Actual Movement: {actual}")
+        # print("✅ Correct!" if prediction == actual else "❌ Incorrect.")
 
     # Get prediction
     # final_predictions, true_labels = predictor.make_predictions(merged_df)

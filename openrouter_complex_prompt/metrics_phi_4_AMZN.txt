@@ -1,0 +1,7 @@
+Model: phi_4
+Ticker: AMZN
+MAE: 0.5567
+RMSE: 0.6488
+sMAPE: 0.32%
+R2 Score: 0.8156
+Directional Accuracy (DA): 1.0000

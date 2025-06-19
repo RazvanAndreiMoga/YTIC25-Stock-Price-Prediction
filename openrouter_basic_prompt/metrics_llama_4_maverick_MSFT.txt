@@ -1,0 +1,7 @@
+Model: llama_4_maverick
+Ticker: MSFT
+MAE: 0.6385
+RMSE: 0.6451
+sMAPE: 0.15%
+R2 Score: 0.9594
+Directional Accuracy (DA): 1.0000

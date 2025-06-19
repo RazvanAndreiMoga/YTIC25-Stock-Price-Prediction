@@ -1,0 +1,7 @@
+Model: LSTM
+Ticker: META
+MAE: 6.1925
+RMSE: 6.9705
+sMAPE: 1.26%
+R2 Score: -1.4611
+Directional Accuracy (DA): 0.0000

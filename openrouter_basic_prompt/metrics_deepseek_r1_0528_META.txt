@@ -1,0 +1,7 @@
+Model: deepseek_r1_0528
+Ticker: META
+MAE: 10.7641
+RMSE: 11.3670
+sMAPE: 2.18%
+R2 Score: -6.3396
+Directional Accuracy (DA): 0.5000
