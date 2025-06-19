@@ -1,17 +1,3 @@
-the project source code (or a link to the Git repository). Please upload the archive here: https://ubbcluj-my.sharepoint.com/:f:/g/personal/camelia_serban_ubbcluj_ro/EskB_dVrSR1Btjud_r2ZmUUB9s8Y-VQ6ks7M4jm3lFXoMw
-
-
-The students must propose a project from a specific field of interest
-(economy, medicine, computer science...). The implementation of the
-proposed project should be completed with a small to medium
-application written in python that integrates the concepts learned in the
-course.
-In carrying out the project, the following steps will be considered:
-▪ the statement of the problem (project proposal) to take place by week 7, through an email
-to the course coordinator (camelia.serban@ubbcluj.ro)
-▪ the implementation planning will follow the Agile Methodology, once every 3 weeks we
-will have demos at the course and seminar, following a plan established in week 7.
-
 # YTIC25 Stock Price Prediction: Classical vs Modern Approaches
 
 This research compares classical machine learning models with large language models (LLMs) for stock trend forecasting by incorporating sentiment analysis from financial news and Google Trends data. The primary objective is to evaluate how traditional ML approaches and LLMs perform when combining financial metrics with sentiment analysis and Google Trends data.
