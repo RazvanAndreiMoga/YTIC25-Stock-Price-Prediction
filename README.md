@@ -13,9 +13,4 @@ This research compares classical machine learning models with large language mod
 # Future Work: 
 - Integrate more diverse data sources, such as social media sentiment, economic indicators, and geopolitical events, to further improve the model’s accuracy.
 - Implement real-time prediction systems that continuously update predictions based on incoming data.
- 
-The first iteration should include:
- 
-Domain: Define the entities for the conceptual model (2-3 entities).
-Three functionalities: Search, filter, and sort.
-Graphical User Interface (GUI): Implement a GUI for user interaction.
+
