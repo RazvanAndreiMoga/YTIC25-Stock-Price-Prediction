@@ -16,10 +16,6 @@ class SentimentAnalyzer:
         df['date'] = pd.to_datetime(df['datetime'], unit='s').dt.strftime('%Y-%m-%d')
         df = df.drop(columns=['datetime'])
         
-        # Filter and group the data
-        df_filtered = df[['related', 'date', 'compound']]
-        df_grouped = df_filtered.groupby('date', as_index=False).agg({'related': 'first', 'compound': 'mean'})
-
         # Calculate mean sentiment scores
         mean_df = df.groupby(['related', 'date']).mean(numeric_only=True).unstack()
         mean_df = mean_df.xs('compound', axis="columns").reset_index()

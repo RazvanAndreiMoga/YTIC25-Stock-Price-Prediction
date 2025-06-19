@@ -1,3 +1,3 @@
-Day 1: Predicted Close = 421.59, Trend = Bullish
-Day 2: Predicted Close = 421.78, Trend = Bullish
-Day 3: Predicted Close = 424.28, Trend = Bullish
+Day 1: Predicted Close = 406.35, Actual Close = 418.46, Trend = Bearish
+Day 2: Predicted Close = 406.48, Actual Close = 418.46, Trend = Bearish
+Day 3: Predicted Close = 407.71, Actual Close = 418.46, Trend = Bearish

@@ -55,9 +55,9 @@ class LSTMModel:
         average_val_loss = np.mean(val_scores)
         print(f'Average validation loss: {average_val_loss:.4f}')
 
-        # Train the final model on the entire training data
-        model = self.create_model()
-        model.fit(X_train, y_train, epochs=self.epochs, batch_size=self.batch_size, validation_data=(X_test, y_test), callbacks=[early_stopping, checkpoint])
+        # # Train the final model on the entire training data
+        # model = self.create_model()
+        # model.fit(X_train, y_train, epochs=self.epochs, batch_size=self.batch_size, validation_data=(X_test, y_test), callbacks=[early_stopping, checkpoint])
 
         # Load the best model
         model.load_weights(f'checkpoint/stock_price_model_{self.ticker}.keras')

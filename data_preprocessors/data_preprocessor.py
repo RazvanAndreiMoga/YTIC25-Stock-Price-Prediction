@@ -1,14 +1,17 @@
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
+import pandas as pd
 
 class DataPreprocessor:
     def __init__(self, seq_length=10):
         self.seq_length = seq_length
         self.scaler = MinMaxScaler()
 
-    def normalize_data(self, data):
-        scaled_data = self.scaler.fit_transform(data)
-        return scaled_data
+    def normalize_data(self, df):
+        from sklearn.preprocessing import MinMaxScaler
+        scaler = MinMaxScaler()
+        df_scaled = scaler.fit_transform(df)
+        return pd.DataFrame(df_scaled, columns=df.columns, index=df.index)
 
     def create_sequences(self, data):
         X = []

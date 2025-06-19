@@ -153,7 +153,7 @@ class FinnHub():
             self.req_new()
             self.create_table()
             self.clean_table()
-            self.lang_review()
+            # self.lang_review()
 
     def init_sql(func):
         """ Decorator that open the sql database, save it and close it. The operation are between the opening and
@@ -246,8 +246,8 @@ class FinnHub():
                     self.nb_request=0
         return wrapper_
 
-    @init_sql
-    def lang_review(self,conn_,c):
+    # @init_sql
+    # def lang_review(self,conn_,c):
         """ Methods that delete non-english entries based on the 'headline' column in a SQLlite3 db
 
         Parameters

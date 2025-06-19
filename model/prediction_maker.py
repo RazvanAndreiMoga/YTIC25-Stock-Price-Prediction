@@ -25,7 +25,7 @@ class PredictionMaker:
         all_close_values = self.scaler.inverse_transform(scaled_data)[:, 0]
 
         # Latest known price from the training data
-        latest_known_price = all_close_values[len(train_data) - 1]
+        latest_known_price = all_close_values[58]
 
         # Compare predictions with the latest known price and save to a text file
         trend_file_path = os.path.join('output', self.ticker, f'{self.ticker}_trend.txt')
@@ -33,6 +33,6 @@ class PredictionMaker:
         with open(trend_file_path, 'w') as f:
             for i, predicted_price in enumerate(final_predictions):
                 trend = "Bullish" if predicted_price > latest_known_price else "Bearish"
-                f.write(f"Day {i + 1}: Predicted Close = {predicted_price:.2f}, Trend = {trend}\n")
+                f.write(f"Day {i + 1}: Predicted Close = {predicted_price:.2f}, Actual Close = {latest_known_price:.2f}, Trend = {trend}\n")
 
         return final_predictions, true_close, all_close_values

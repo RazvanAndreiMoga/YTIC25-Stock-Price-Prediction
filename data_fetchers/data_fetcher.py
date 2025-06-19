@@ -43,4 +43,10 @@ class DataMerger:
         plt.savefig(corr_matrix_path)
         plt.close()
 
+        # Save the merged DataFrame to a CSV file
+        merged_df_path = os.path.join('output', self.ticker, f'merged_data_{self.ticker}.csv')
+        os.makedirs(os.path.dirname(merged_df_path), exist_ok=True)
+        merged_df.to_csv(merged_df_path)
+
+
         return merged_df, correlation_matrix
